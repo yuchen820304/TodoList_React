@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.insideValue{
+  display: none;
+}
+
+.open{
+  display: block;
+  width: calc(100% - 300px);
+  border: 1px solid lightgray;
+  border-radius: 3px 0 0 3px;
+  height: 40px;
+  font-size: 2rem;
+  padding: 5px 10px;
+  outline: none;
+}
+
+body{
+  background: radial-gradient(
+    circle,
+    rgba(10, 0, 36, 0.1110819327731093) 0%,
+    rgba(9, 9, 121, 0.1110819327731093) 5%,
+    rgba(0, 212, 255, 0.04665616246498594) 100%
+  );
+}
+
+.todoBlock{
+  width: 600px;
+  margin: 50px auto;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 1px 1px 5px gray;
+}
+
+.todoBlock h1{
+  font-size: 2.4rem;
+  margin: 0 0 10px 0;
+}
+
+.todoBlock_input{
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.todoBlock_input.-on {
+  box-shadow: 0 0 5px gray;
+  transform: scale(1.01);
+  transform-origin: center center;
+}
+
+.task_name{
+  width: calc(100% - 50px);
+  border: 1px solid lightgray;
+  border-radius: 3px 0 0 3px;
+  height: 40px;
+  font-size: 2rem;
+  padding: 5px 10px;
+  outline: none;
+  vertical-align: top;
+}
+
+input.task_name::placeholder {
+  color: lightgray;
+}
+
+.task_clean{
+  float: right;
+  background: none;
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  height: 30px;
+  width: 50px;
+  outline: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.add_btn{
+  width: 50px;
+  height: 40px;
+  border: 1px solid lightgray;
+  border-left: 0;
+  background-color: white;
+  box-shadow: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0 3px 3px 0;
+}
+
+.todoItem{
+  margin-top: 30px;
+}
+
+.todoItem_list:first-child {
+  border-top: 1px solid black;
+  padding-top: 20px;
+}
+
+.todoItem_list{
+  font-size:2rem;
+  list-style:none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid gray;
+  padding-bottom: 20px;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.todoItem_list:last-child{
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+.task_btn{
+  outline: none;
+  width: 50px;
+  height: 40px;
+  font-size: 1.6rem;
+  background: none;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid #eee;
+}
